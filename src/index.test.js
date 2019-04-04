@@ -1,8 +1,8 @@
 'use strict';
-
 const reporterA = require('reporterA');
-const reporterB = require('reporterB');
+const reporterB = require('./fixtures/reporterB.js');
 const finder = require('find-package-json');
+const path = require('path');
 
 jest.mock('../package.json');
 jest.mock('find-package-json');
@@ -22,7 +22,9 @@ describe('The test result processor', function () {
 
   it('gives a useful error message when no config is given', function () {
     packageJsonProviderMock.mockReturnValue({
-      value: {}
+      value: {},
+      filename: path.join(__dirname, '/package.json'),
+      done: true
     });
 
     expect(function () {
@@ -35,13 +37,19 @@ describe('The test result processor', function () {
 
     const results = jest.fn();
 
-    packageJsonProviderMock.mockReturnValue({
+    packageJsonProviderMock.mockReturnValueOnce({
       value: {
         jestTestResultProcessors: [
           'reporterA',
-          'reporterB'
+          './fixtures/reporterB'
         ]
-      }
+      },
+      filename: path.join(__dirname, '/package.json'),
+      done: false
+    });
+    packageJsonProviderMock.mockReturnValueOnce({
+      value: undefined,
+      done: true
     });
     multiResultProcessor(results);
     expect(reporterA).toHaveBeenCalledTimes(1);

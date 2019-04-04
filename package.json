@@ -1,6 +1,6 @@
 {
   "name": "jest-multiple-result-processors",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A test result processor that allows adding multiple processors easily",
   "main": "src/index.js",
   "repository": "https://github.com/meza/jest-multiple-result-processors",
@@ -27,6 +27,7 @@
     "husky": "^1.3.1",
     "install-deps-postmerge": "^1.0.2",
     "jest": "^24.7.1",
+    "path": "^0.12.7",
     "yarn": "^1.15.2"
   },
   "dependencies": {
