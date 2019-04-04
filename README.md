@@ -1,6 +1,6 @@
 #Multiple Jest Test Result Processors ![npm](https://img.shields.io/npm/v/jest-multiple-results-processor.svg)
 
-![CircleCI token](https://img.shields.io/circleci/token/6a2612980deeac020acd1c4401785f06e91a52af/project/github/meza/jest-multiple-results-processor/master.svg?label=circleci)
+![CircleCI token](https://img.shields.io/circleci/token/5efb6fd44edda4c2dba4ef86fa3502b95df20ebc/project/github/meza/jest-multiple-results-processor/master.svg?label=circleci)
 [![codecov](https://codecov.io/gh/meza/jest-multiple-results-processor/branch/master/graph/badge.svg)](https://codecov.io/gh/meza/jest-multiple-results-processor)
 ![Dependencies](https://david-dm.org/meza/jest-multiple-results-processor.svg)
 [![install size](https://packagephobia.now.sh/badge?p=jest-multiple-results-processor)](https://packagephobia.now.sh/result?p=jest-multiple-results-processor)
