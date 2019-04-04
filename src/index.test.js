@@ -11,7 +11,7 @@ const packageJsonProviderMock = jest.fn();
 finder.mockImplementation(function () {
   return {
     next: packageJsonProviderMock
-  }
+  };
 });
 
 const multiResultProcessor = require('./index');
@@ -26,8 +26,8 @@ describe('The test result processor', function () {
     });
 
     expect(function () {
-      multiResultProcessor()
-    }).toThrow("No processors configured. Please add \"jestTestResultProcessors\" to your package.json")
+      multiResultProcessor();
+    }).toThrow('No processors configured. Please add "jestTestResultProcessors" to your package.json');
 
   });
 

@@ -7,7 +7,7 @@ module.exports = function (results) {
   const config = f.next().value;
 
   if (!config.hasOwnProperty('jestTestResultProcessors')) {
-    throw "No processors configured. Please add \"jestTestResultProcessors\" to your package.json";
+    throw new Error('No processors configured. Please add "jestTestResultProcessors" to your package.json');
   }
 
   const processors = config.jestTestResultProcessors;
