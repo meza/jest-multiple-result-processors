@@ -1,12 +1,12 @@
-#Multiple Jest Test Result Processors ![npm](https://img.shields.io/npm/v/jest-multiple-results-processor.svg)
+#Multiple Jest Test Result Processors ![npm](https://img.shields.io/npm/v/jest-multiple-result-processors.svg)
 
-![CircleCI token](https://img.shields.io/circleci/token/5efb6fd44edda4c2dba4ef86fa3502b95df20ebc/project/github/meza/jest-multiple-results-processor/master.svg?label=circleci)
-[![codecov](https://codecov.io/gh/meza/jest-multiple-results-processor/branch/master/graph/badge.svg)](https://codecov.io/gh/meza/jest-multiple-results-processor)
-![Dependencies](https://david-dm.org/meza/jest-multiple-results-processor.svg)
-[![install size](https://packagephobia.now.sh/badge?p=jest-multiple-results-processor)](https://packagephobia.now.sh/result?p=jest-multiple-results-processor)
-[![npm downloads](https://img.shields.io/npm/dm/jest-multiple-results-processor.svg?style=flat-square)](http://npm-stat.com/charts.html?package=jest-multiple-results-processor)
-![Snyk Vulnerabilities for npm package](https://img.shields.io/snyk/vulnerabilities/npm/jest-multiple-results-processor.svg)
-![NPM](https://img.shields.io/npm/l/jest-multiple-results-processor.svg)
+![CircleCI token](https://img.shields.io/circleci/token/5efb6fd44edda4c2dba4ef86fa3502b95df20ebc/project/github/meza/jest-multiple-result-processors/master.svg?label=circleci)
+[![codecov](https://codecov.io/gh/meza/jest-multiple-result-processors/branch/master/graph/badge.svg)](https://codecov.io/gh/meza/jest-multiple-result-processors)
+![Dependencies](https://david-dm.org/meza/jest-multiple-result-processors.svg)
+[![install size](https://packagephobia.now.sh/badge?p=jest-multiple-result-processors)](https://packagephobia.now.sh/result?p=jest-multiple-result-processors)
+[![npm downloads](https://img.shields.io/npm/dm/jest-multiple-result-processors.svg?style=flat-square)](http://npm-stat.com/charts.html?package=jest-multiple-result-processors)
+![Snyk Vulnerabilities for npm package](https://img.shields.io/snyk/vulnerabilities/npm/jest-multiple-result-processors.svg)
+![NPM](https://img.shields.io/npm/l/jest-multiple-result-processors.svg)
 
 
 Jest currently has no capabilities of chaining multiple test result processors out of the box.
@@ -20,11 +20,11 @@ This small utility does just that.
 ## Install
 
 ```
-yarn add -D jest-multiple-results-processor
+yarn add -D jest-multiple-result-processors
 ```
 
 ```
-npm install --dev jest-multiple-results-processor
+npm install --dev jest-multiple-result-processors
 ```
 
 ## Configure
