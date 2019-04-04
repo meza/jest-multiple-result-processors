@@ -11,7 +11,7 @@
     "test": "eslint . && jest",
     "test:coverage": "eslint . && jest --coverage",
     "fix-lint": "eslint . --fix",
-    "ci": "yarn test:coverage"
+    "ci": "yarn test:coverage && codecov"
   },
   "husky": {
     "hooks": {
