@@ -1,0 +1,23 @@
+{
+  "name": "jest-multiple-result-processors",
+  "version": "0.0.1",
+  "description": "A test result processor that allows adding multiple processors easily",
+  "main": "src/index.js",
+  "repository": "https://github.com/meza/jest-multiple-result-processors",
+  "author": "meza",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "test": "eslint . && jest",
+    "ci": "yarn test"
+  },
+  "devDependencies": {
+    "eslint": "^5.16.0",
+    "eslint-config-tailored-tunes": "^3.0.0",
+    "jest": "^24.7.1",
+    "yarn": "^1.15.2"
+  },
+  "dependencies": {
+    "find-package-json": "^1.2.0"
+  }
+}

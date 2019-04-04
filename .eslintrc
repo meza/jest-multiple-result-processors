@@ -1,0 +1,17 @@
+{
+  "extends": "tailored-tunes",
+  "rules": {
+    "no-alert": 2,
+    "no-console": 2,
+    "prefer-const": 2,
+    "complexity": [
+      "error",
+      {
+        "max": 8
+      }
+    ]
+  },
+  "env": {
+    "jest": true
+  }
+}
