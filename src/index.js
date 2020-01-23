@@ -8,9 +8,11 @@ module.exports = function (results) {
   let config = {};
   let configDir = '';
 
-  for (let nextValue = f.next(); nextValue.done !== true; nextValue = f.next()) {
-    config = nextValue.value;
-    configDir = path.dirname(nextValue.filename);
+  for (let nextValue = f.next(); nextValue.done !== true && !configDir; nextValue = f.next()) {
+    if (nextValue.value.name !== 'jest-multiple-result-processors' && nextValue.value.hasOwnProperty('jestTestResultProcessors')) {
+      config = nextValue.value;
+      configDir = path.dirname(nextValue.filename);
+    }
   }
 
   if (!config.hasOwnProperty('jestTestResultProcessors')) {
