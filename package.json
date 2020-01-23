@@ -3,7 +3,10 @@
   "version": "0.0.3",
   "description": "A test result processor that allows adding multiple processors easily",
   "main": "src/index.js",
-  "repository": "https://github.com/meza/jest-multiple-result-processors",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/meza/jest-multiple-result-processors"
+  },
   "author": "meza",
   "license": "MIT",
   "private": false,
