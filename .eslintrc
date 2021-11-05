@@ -1,6 +1,7 @@
 {
   "extends": "tailored-tunes",
   "rules": {
+    "no-prototype-builtins": 0,
     "no-alert": 2,
     "no-console": 2,
     "prefer-const": 2,

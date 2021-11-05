@@ -1,4 +1,4 @@
-'use strict';
+
 const reporterA = require('reporterA');
 const reporterB = require('./fixtures/reporterB.js');
 const finder = require('find-package-json');
@@ -8,7 +8,7 @@ jest.mock('../package.json');
 jest.mock('find-package-json');
 
 const packageJsonProviderMock = jest.fn();
-finder.mockImplementation(function () {
+finder.mockImplementation(() => {
   return {
     next: packageJsonProviderMock
   };
@@ -16,26 +16,26 @@ finder.mockImplementation(function () {
 
 const multiResultProcessor = require('./index');
 
-describe('The test result processor', function () {
+describe('The test result processor', () => {
 
   afterEach(() => {
     jest.clearAllMocks();
   });
 
-  it('gives a useful error message when no config is given', function () {
+  it('gives a useful error message when no config is given', () => {
     packageJsonProviderMock.mockReturnValue({
       value: {},
       filename: path.join(__dirname, '/package.json'),
       done: true
     });
 
-    expect(function () {
+    expect(() => {
       multiResultProcessor();
     }).toThrow('No processors configured. Please add "jestTestResultProcessors" to your package.json');
 
   });
 
-  it('threads the results through the configured processors', function () {
+  it('threads the results through the configured processors', () => {
 
     const results = 'mock-jest-test-results';
 
@@ -60,7 +60,7 @@ describe('The test result processor', function () {
     expect(reporterB).toHaveBeenCalledWith(results);
   });
 
-  it('returns the first package.json file it finds walking up in the filesystem', function () {
+  it('returns the first package.json file it finds walking up in the filesystem', () => {
     const results = 'mock-jets-test-results';
 
     packageJsonProviderMock.mockReturnValueOnce({
@@ -97,7 +97,7 @@ describe('The test result processor', function () {
     expect(packageJsonProviderMock).toHaveBeenCalledTimes(3);
   });
 
-  it('returns the second package.json file it finds walking up in the filesystem if the first one doesn\'t have jestTestResultProcessors config', function () {
+  it('returns the second package.json file it finds walking up in the filesystem if the first one doesn\'t have jestTestResultProcessors config', () => {
     const results = 'mock-jets-test-results';
 
     packageJsonProviderMock.mockReturnValueOnce({

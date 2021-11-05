@@ -1,4 +1,3 @@
-'use strict';
 
 const finder = require('find-package-json');
 const path = require('path');
@@ -21,7 +20,7 @@ module.exports = function (results) {
 
   const processors = config.jestTestResultProcessors;
 
-  return processors.reduce(function (result, value) {
+  return processors.reduce((result, value) => {
     let toRequire = value;
     if (value.charAt(0) === '.') {
       toRequire = path.resolve(configDir, value);
