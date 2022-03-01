@@ -1,6 +1,6 @@
 {
   "name": "jest-multiple-result-processors",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A test result processor that allows adding multiple processors easily",
   "main": "src/index.js",
   "repository": {
